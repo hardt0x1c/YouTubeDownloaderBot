@@ -1,6 +1,7 @@
 from pytube import YouTube
 
 
+# Функция скачивания видео с ютуб
 def youtube_downloader(url):
     video = YouTube(url)
     print('Загрузка начинается...')

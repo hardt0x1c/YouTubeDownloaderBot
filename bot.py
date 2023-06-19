@@ -17,12 +17,14 @@ storage = MemoryStorage()
 dp = Dispatcher()
 
 
+# Обработчик команды /start
 @dp.message(Command('start'))
 async def start(message: types.Message, state: FSMContext):
     await message.answer(msg.greet)
     await state.set_state(UserSendURL.send_url)
 
 
+# Обработчик состояния
 @dp.message(UserSendURL.send_url)
 async def download(message: types.Message, state: FSMContext):
     url = message.text

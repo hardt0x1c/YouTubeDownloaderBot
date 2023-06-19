@@ -1,1 +1,1 @@
-bot_token = 'token'
+bot_token = 'token'  # токен бота
