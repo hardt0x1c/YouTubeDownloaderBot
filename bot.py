@@ -28,7 +28,7 @@ async def download(message: types.Message, state: FSMContext):
     url = message.text
     video_dowloaded = youtube_downloader(url)
     video = FSInputFile('downloads/videos/video.mp4')
-    await message.answer_video(video, caption='Лови видео')
+    await message.answer_video(video, caption=f'Видео по ссылке {url}')
 
 
 async def main():
